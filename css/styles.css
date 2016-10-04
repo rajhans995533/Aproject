@@ -1,0 +1,94 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+@font-face {
+    font-family: 'MS300';
+    src: url('../fonts/MuseoSans300.otf');
+}
+@font-face {
+    font-family: 'MSI700';
+    src: url('../fonts/MuseoSans700Italic.otf');
+}
+html, body, .wrapper {
+    width: 1080px;
+    height: 1920px;
+    -webkit-transform: translate3d(40%, -22%, 0) rotate(90deg);
+}
+.wrapper {
+    position: relative;
+}
+.wrapper {
+    overflow: hidden;
+}
+
+.transform {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+
+
+.animate-left{
+	position:relative;
+	-webkit-animation: animateLeft 2s;
+}
+
+.animate-right{
+	position:relative;
+	-webkit-animation: animateRight 2s;
+}
+
+#scroll {
+    position: relative;
+	width: 100%;
+	height: 200px;
+	color: #fff;
+	overflow: hidden;
+	font-size: 60px;
+	background: #000;
+	padding-top: 20px;
+}
+
+#scroll p {
+	 position: absolute;
+	 width: 100%;
+	 height:100%;
+	 margin: 0;
+	 line-height: 75px;
+	 text-align: center;
+	 -webkit-transform:translateX(100%);	
+	 -webkit-animation: scrollLeft 5s;
+     -webkit-animation-timing-function: linear;
+     -webkit-animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes animateLeft{
+	from{
+		left:-300px;
+		opacity:0
+	} 
+	to{
+		left:0;
+		opacity:1
+	}
+}
+
+@-webkit-keyframes animateRight{
+	from{
+		right:-300px;
+		opacity:0
+	} 
+	to{
+		right:0;
+		opacity:1
+	}
+}
+
+@-webkit-keyframes scrollLeft {
+	 0%   { 
+	 	-webkit-transform: translateX(100%); 
+	 }
+	 100% { 
+	 	-webkit-transform: translateX(-100%);
+	 }
+}
